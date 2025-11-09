@@ -58,4 +58,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
 }
