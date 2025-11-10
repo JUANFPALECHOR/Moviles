@@ -45,18 +45,26 @@ class InventoryWidgetProvider : AppWidgetProvider() {
         }
 
         val togglePendingIntent = PendingIntent.getBroadcast(
-            context, 0, toggleIntent, PendingIntent.FLAG_IMMUTABLE
+            context,
+            1,
+            toggleIntent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
         views.setOnClickPendingIntent(R.id.iv_ojo, togglePendingIntent)
 
-        // Acción de "Gestionar inventario" para solo la hu1
-        val intent = Intent(context, MainActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(
-            context, 0, intent, PendingIntent.FLAG_IMMUTABLE
+
+        // Acción de "Gestionar inventario"
+        val openAppIntent = Intent(context, com.univalle.inventorywidget.ui.login.LoginActivity::class.java)
+        val openAppPendingIntent = PendingIntent.getActivity(
+            context,
+            2,
+            openAppIntent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
-        views.setOnClickPendingIntent(R.id.tv_gestionar, pendingIntent)
+        views.setOnClickPendingIntent(R.id.tv_gestionar, openAppPendingIntent)
 
         manager.updateAppWidget(id, views)
+
     }
 
     override fun onReceive(context: Context, intent: Intent) {
