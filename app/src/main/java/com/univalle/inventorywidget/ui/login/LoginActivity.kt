@@ -33,8 +33,8 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Autenticación exitosa ✅", Toast.LENGTH_SHORT).show()
 
                     // Guardar la sesión activa
-                    val prefs = getSharedPreferences("inventory_prefs", MODE_PRIVATE)
-                    prefs.edit().putBoolean("sesionActiva", true).apply()
+                    val prefs = getSharedPreferences("sesion_usuario", MODE_PRIVATE)
+                    prefs.edit().putBoolean("isLoggedIn", true).apply()
 
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
