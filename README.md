@@ -1,6 +1,6 @@
 # 📦 Inventory Widget App
 
-Aplicación móvil desarrollada en **Android (Kotlin)** como parte del **Miniproyecto 1** de la asignatura *Desarrollo de Aplicaciones para Dispositivos Móviles* en la **Universidad del Valle**.
+Es una Aplicación móvil desarrollada en **Android (Kotlin)** como parte del **Miniproyecto 1** de la asignatura *Desarrollo de Aplicaciones para Dispositivos Móviles* en la **Universidad del Valle**.
 
 El objetivo principal del proyecto es **crear una aplicación de inventario con un widget interactivo**, que permita al usuario visualizar, agregar, editar y eliminar productos, así como autenticarse mediante huella digital.
 
